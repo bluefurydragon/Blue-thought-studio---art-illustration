@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | Blue Thought Studios — Art & Illustration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Blue Thought <span>Studios</span></a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" class="active">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="overlay" id="overlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="orb"></div>
+      <div class="container">
+        <p class="hero-eyebrow">What It Costs</p>
+        <h2>Pricing</h2>
+        <p>
+          Starting rates for both services. Prices are flexible depending on complexity,
+          scope, and timeline — reach out and we'll figure out what makes sense for your project.
+        </p>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="container">
+
+        <div class="overview-header">
+          <p class="section-label">Illustration Services</p>
+        </div>
+        <div class="pricing-grid" style="margin-bottom: 2.5rem;">
+
+          <div class="pricing-card">
+            <h3>Art & Illustration</h3>
+            <div class="price">$20 – $50</div>
+            <p class="price-note">per piece</p>
+            <div class="pricing-divider"></div>
+            <p>Simple to mid-complexity illustrations. 1–2 revisions included. Final price reflects detail level, usage rights, and turnaround.</p>
+          </div>
+
+          <div class="pricing-card featured">
+            <span class="pricing-badge">Most Requested</span>
+            <h3>Book & Cover Art</h3>
+            <div class="price">$30 – $60</div>
+            <p class="price-note">per cover</p>
+            <div class="pricing-divider"></div>
+            <p>Full cover design with layout, title treatment, and composition. Built for print and digital publishing platforms.</p>
+          </div>
+
+        </div>
+
+        <div class="notice">
+          <strong>All services include 1–2 free revisions.</strong> Additional revisions or scope changes may incur extra fees.
+          Not sure about your budget? <a href="contact.html" style="color:var(--accent);text-decoration:none;font-weight:600;">Send your brief</a> — no commitment required.
+        </div>
+
+        <div style="margin-top: 2.5rem; text-align:center;">
+          <a href="contact.html" class="btn-primary">Contact to Book →</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="footer-logo">Blue Thought <span>Studios</span></span>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms</a>
+      </div>
+      <span class="footer-copy">© 2026 Blue Thought Studios.</span>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const overlay   = document.getElementById('overlay');
+    function toggleMenu(open) {
+      hamburger.classList.toggle('open', open);
+      mobileNav.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    hamburger.addEventListener('click', () => toggleMenu(!mobileNav.classList.contains('open')));
+    overlay.addEventListener('click', () => toggleMenu(false));
+  </script>
+
+</body>
+</html>
